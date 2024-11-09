@@ -1,26 +1,26 @@
 
-.content__floor {
+.content__wrapper {
     display: flex;
     flex-direction: column;
     
     width: 100%;
 }
-.floor__nav {
+.top__nav {
 display: flex;
 justify-content: space-between;
 align-items: center;
 width: calc(100% - 40px);
 margin: 20px 20px;
 }
-.floor__nav a{
-font-size:36px;
+.top__nav a{
+font-size:32px;
 font-weight: 700;
 color:#EFC825;
 display: flex;
 justify-content: flex-start;
 align-items: center;
 }
-.floor__nav img{
+.top__nav img{
 
     width:50px;
     margin-right:8px;
@@ -28,7 +28,7 @@ align-items: center;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
-.floor__nav button{
+.top__nav button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,7 +43,7 @@ align-items: center;
      margin: 0px 10px;
      transition: all 0.3s ease; /* Додаємо плавний перехід */
 }
-.floor__nav button:hover{
+.top__nav button:hover{
     
      border-radius: 20px;
      background-color: #EFC825;
@@ -56,20 +56,20 @@ align-items: center;
 
 }
 
-.floor__nav:hover img {
+.top__nav:hover img {
     transform: scale(1.1);
    
 }
 .floor__map {
-    width: calc(100% - 40px);
-    margin: 0px 20px;
+    width: 100%;
+    
 }
 
 .map__wrapper  {
    max-height:100%; 
    min-height:300px; 
     position: relative;
-    width: 99%; 
+    width: 100%; 
     overflow-x:auto; 
     overflow-y: hidden;
    
@@ -79,7 +79,7 @@ align-items: center;
 .map{
    
     position: absolute;
-    padding: 20px;
+    padding: 20px 30px;
     top: 0; 
     left: 0; 
     width: auto;
@@ -201,6 +201,77 @@ align-items: center;
   margin: 10px;
 }
 
+.map__info_title {
+  font-size:22px;
+  width: 100%;
+  margin-bottom: 20px;
+font-weight: 700;
+color:#00a43c;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.map__info_title img{
+
+  width:50px;
+  margin-right:5px;
+  padding: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.map__info_title:hover img {
+  transform: scale(1.1);
+ 
+}
+
+.map__info_text p{
+  margin-bottom: 8px;
+  font-size: 18px;
+font-weight: 700;
+color:#718679;
+display: flex;
+align-items: center;
+}
+.map__info_text img{
+
+  width:35px;
+  margin-right:5px;
+  padding: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.map__info_text:hover img {
+  transform: scale(1.05);
+ 
+}
+.map__info_link {
+  margin-bottom: 8px;
+  font-size: 22px;
+font-weight: 700;
+color:#EFC825;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.map__info__svg{
+  width:35px;
+  fill:#EFC825;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.map__info_link :hover .map__info__svg {
+  transform: scale(1.05);
+  fill:#c9a100;
+}
+.map__info_link :active .map__info__svg {
+  transform: scale(1);
+  fill:#EFC825;
+}
+
+
 /* Адаптивність для планшетів */
 @media (max-width: 768px) {
   .map__info {
@@ -228,25 +299,25 @@ align-items: center;
 
 @media (max-width: 1100px) {
 
-    .floor__nav {
+    .top__nav {
       
         width: calc(100% - 20px);
         margin: 10px 10px;
         }
-        .floor__nav a{
+        .top__nav a{
         font-size:22px;
         font-weight: 600;
         
        
         }
-        .floor__nav img{
+        .top__nav img{
         
             width:40px;
             margin-right:5px;
             padding: 5px;
             
         }
-        .floor__nav button{
+        .top__nav button{
 
              font-size: 14px;
              font-weight: 600;
@@ -255,7 +326,7 @@ align-items: center;
              margin: 0px 10px;
              transition: all 0.3s ease; /* Додаємо плавний перехід */
         }
-        .floor__nav button:hover{
+        .top__nav button:hover{
     
             border-radius: 20px;
             background-color: #EFC825;
@@ -270,25 +341,25 @@ align-items: center;
 }
 @media (max-width: 910px) {
 
-    .floor__nav {
+    .top__nav {
       
         width: calc(100% - 20px);
         margin: 10px 10px;
         }
-        .floor__nav a{
+        .top__nav a{
         font-size:20px;
         font-weight: 600;
         
        
         }
-        .floor__nav img{
+        .top__nav img{
         
             width:35px;
             margin-right:3px;
             padding: 5px;
             
         }
-        .floor__nav button{
+        .top__nav button{
 
              font-size: 14px;
              font-weight: 600;
@@ -298,7 +369,7 @@ align-items: center;
              margin: 0px 3px;
              transition: all 0.3s ease; /* Додаємо плавний перехід */
         }
-        .floor__nav button:hover{
+        .top__nav button:hover{
 
             background-color: #EFC825;
             color: #ffffff;
@@ -313,6 +384,45 @@ align-items: center;
         width: 100%;
         margin: 0px;
     }
+    .map__info_title {
+      font-size:20px;
+     
+ 
+    }
+    .map__info_title img{
+    
+      width:35px;
+     
+      padding: 0px;
+    
+    }
 
+    
+    .map__info_text p{
+      margin-bottom: 8px;
+      font-size: 14px;
+    font-weight: 600;
+    
+    }
+    .map__info_text img{
+    
+      width:30px;
+      margin-right:5px;
+      padding: 5px;
+     
+    }
+    
+  
+    .map__info_link {
+      
+      font-size: 18px;
+   
+   
+    }
+    
+    .map__info__svg{
+      width:30px;
+     
+    }
 
 }

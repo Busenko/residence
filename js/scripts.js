@@ -59,8 +59,8 @@ window.addEventListener("DOMContentLoaded", function () {
 let rooms = document.querySelectorAll('.cls-4');
 let popupBg = document.querySelector('.map__info_bg');
 let popup__link = document.querySelector('.map__info_link');
-let popup__title = document.querySelector('.map__info_title');
-let popup__text = document.querySelector('.map__info_text');
+let popup__title = document.querySelector('.map__room_num');
+// let popup__text = document.querySelector('.map__info_text');
 let selectedRoom = null; // Змінна для збереження обраної кімнати
 
 rooms.forEach((item) => {
@@ -77,7 +77,7 @@ rooms.forEach((item) => {
         // Оновлюємо контент попапа
         popup__link.setAttribute('href', this.getAttribute('data-link'));
         popup__title.textContent = this.getAttribute('data-title');
-        popup__text.innerHTML = this.getAttribute('data-text');
+        // popup__text.innerHTML = this.getAttribute('data-text');
 
 
         // Показуємо попап

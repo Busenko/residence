@@ -414,6 +414,7 @@ align-items: center;
     overflow: hidden;
     background-color: #F5FFF7;
     width: 100%;
+    /* padding: 0px 30px; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -423,13 +424,12 @@ align-items: center;
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
+ul{
 
-.content__block ul{
-
-    padding: 10px 30px;
-    margin-left: 10px;
+    padding: 10px 40px;
+   
 }
-.content__block li{
+li{
 
     margin-bottom: 8px;
     font-size: 18px;
@@ -487,14 +487,14 @@ align-items: center;
 
 .instructions__svg{
     width:45px;
-   
+    fill:#4c5750;
     padding: 5px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 .instructions__svg:hover  {
     transform: scale(1.05);
-    fill:#EFC825;
+    
 }
 @media (max-width: 1465px) {
 
@@ -518,12 +518,12 @@ align-items: center;
         padding: 0px;
         
     }
-    .content__block ul{
+ul{
 
         padding: 5px 20px;
         margin-left: 10px;
     }
-    .content__block li{
+li{
     
         margin-bottom: 5px;
         font-size: 16px;
@@ -599,12 +599,12 @@ width: 35px;
         padding: 0px;
         
     }
-    .content__block ul{
+ ul{
 
         padding: 5px 20px;
         margin-left: 10px;
     }
-    .content__block li{
+ li{
     
         margin-bottom: 5px;
         font-size: 14px;
@@ -803,7 +803,6 @@ footer {
        max-height: 45px;
         width:100%;
         margin: 0 30px;
-	    
         background-color: #00a43c;
         display: flex;
         justify-content: space-between;
