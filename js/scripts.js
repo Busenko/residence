@@ -177,6 +177,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // на гіт хаб
+
 document.querySelectorAll('a').forEach(link => {
     // Отримуємо поточне значення href
     let href = link.getAttribute('href');
@@ -188,11 +189,21 @@ document.querySelectorAll('a').forEach(link => {
     
     // Додаємо "residence/" перед оновленим значенням href, якщо його там ще немає
     if (!href.startsWith('residence/')) {
-      link.href = 'residence/' + href;
-    } else {
-      link.href = href;
+      href = 'residence/' + href;
     }
-  });
+    
+    // Перевірка доступності посилання
+    fetch(href, { method: 'HEAD' })
+      .then(response => {
+        if (response.ok) {
+          link.href = href; // Якщо посилання доступне, оновлюємо його
+        } else {
+          console.error(`Посилання недоступне: ${href}`);
+        }
+      })
+      .catch(error => {
+        console.error(`Помилка при перевірці посилання ${href}:`, error);
+      });
   
   
 });
