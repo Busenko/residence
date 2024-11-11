@@ -176,5 +176,20 @@ document.addEventListener("DOMContentLoaded", function() {
     
 });
 
+// на гіт хаб
 
+document.querySelectorAll('a').forEach(link => {
+    // Отримуємо поточне значення href
+    let href = link.getAttribute('href');
+    
+    // Видаляємо розширення .html, якщо воно є
+    if (href.endsWith('.html')) {
+      href = href.slice(0, -5); // Видаляємо останні 5 символів (".html")
+    }
+    
+    // Додаємо "residence/" перед оновленим значенням href
+    link.href = 'residence/' + href;
+  });
+  
+  
 });
