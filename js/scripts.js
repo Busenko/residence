@@ -177,7 +177,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // на гіт хаб
-
 document.querySelectorAll('a').forEach(link => {
     // Отримуємо поточне значення href
     let href = link.getAttribute('href');
@@ -203,7 +202,8 @@ document.querySelectorAll('a').forEach(link => {
       })
       .catch(error => {
         console.error(`Помилка при перевірці посилання ${href}:`, error);
-    
-  
+      });
+});
+
   
 });
