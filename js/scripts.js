@@ -177,7 +177,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // на гіт хаб
-
 document.querySelectorAll('a').forEach(link => {
     // Отримуємо поточне значення href
     let href = link.getAttribute('href');
@@ -187,8 +186,12 @@ document.querySelectorAll('a').forEach(link => {
       href = href.slice(0, -5); // Видаляємо останні 5 символів (".html")
     }
     
-    // Додаємо "residence/" перед оновленим значенням href
-    link.href = 'residence/' + href;
+    // Додаємо "residence/" перед оновленим значенням href, якщо його там ще немає
+    if (!href.startsWith('residence/')) {
+      link.href = 'residence/' + href;
+    } else {
+      link.href = href;
+    }
   });
   
   
