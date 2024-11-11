@@ -67,7 +67,7 @@ align-items: center;
 
 .map__wrapper  {
    max-height:100%; 
-   min-height:300px; 
+   min-height:260px; 
     position: relative;
     width: 100%; 
     overflow-x:auto; 
@@ -145,7 +145,7 @@ align-items: center;
   }
 
   .cls-7 {
-    font-size: 70px;
+    font-size: 50px;
   }
   .map__wrapper::-webkit-scrollbar {
     width: 0em;
