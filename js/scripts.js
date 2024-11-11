@@ -203,7 +203,7 @@ document.querySelectorAll('a').forEach(link => {
       })
       .catch(error => {
         console.error(`Помилка при перевірці посилання ${href}:`, error);
-      });
+    
   
   
 });
