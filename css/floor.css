@@ -56,7 +56,7 @@ align-items: center;
 
 }
 
-.top__nav:hover img {
+.top__nav a:hover img {
     transform: scale(1.1);
    
 }
@@ -72,15 +72,15 @@ align-items: center;
     width: 100%; 
     overflow-x:auto; 
     overflow-y: hidden;
-   
+
  
 }
 
 .map{
    
     position: absolute;
-    padding: 20px 30px;
-    top: 0; 
+    padding: 10px 20px;
+    top: 8px; 
     left: 0; 
     width: auto;
     height: 100%;
@@ -190,7 +190,7 @@ align-items: center;
   border: 4px solid #EFC825;
   border-radius: 20px;
   padding: 25px;
-  width: 500px;
+  width: 700px;
   max-width: 90%; /* Додаємо максимальну ширину для маленьких екранів */
   box-sizing: border-box;
 }
@@ -199,6 +199,7 @@ align-items: center;
   display: flex;
   flex-direction: column;
   margin: 10px;
+  margin-bottom: 20px;
 }
 
 .map__info_title {
@@ -229,9 +230,25 @@ align-items: center;
   margin-bottom: 8px;
   font-size: 18px;
 font-weight: 700;
-color:#718679;
+box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.5);
 display: flex;
 align-items: center;
+}
+.map__info_text span{
+ 
+display: flex;
+align-items: center;
+}
+.free__place{
+  color:#718679;
+}
+.nofree__place{
+  color:#00a43c;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
 }
 .map__info_text img{
 
@@ -242,7 +259,7 @@ align-items: center;
   transition: transform 0.3s ease;
 }
 
-.map__info_text:hover img {
+.map__info_text p:hover img {
   transform: scale(1.05);
  
 }
@@ -285,7 +302,7 @@ align-items: center;
 /* Адаптивність для мобільних телефонів */
 @media (max-width: 480px) {
   .map__info {
-    width: 90%; 
+    width: 95%; 
     padding: 15px; 
     border-radius: 10px; 
   }
@@ -384,6 +401,9 @@ align-items: center;
         width: 100%;
         margin: 0px;
     }
+    .map__info{
+      padding: 8px;
+    }
     .map__info_title {
       font-size:20px;
      
@@ -397,7 +417,11 @@ align-items: center;
     
     }
 
+    .map__info_text{
+      margin: 5px;
+     
     
+    }
     .map__info_text p{
       margin-bottom: 8px;
       font-size: 14px;

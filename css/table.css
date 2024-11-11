@@ -1,0 +1,125 @@
+
+.block__table{
+
+    width: 100%;
+
+}
+
+
+table.data caption {
+    padding: 10px;
+      font-weight: bold;
+      text-align: center;
+      color:#00a43c;
+    }
+    
+
+
+table {
+  width: calc(100% - 40px);
+  border-collapse: collapse;
+  border: 4px solid  #00a43c;
+  table-layout: auto;
+  margin: 20px;
+  table-layout: fixed;
+}
+
+/* Встановлення ширини для перших шести клітинок */
+.data th:nth-child(-n+6),
+.data td:nth-child(-n+6) {
+    width: 14.28%; /* Однакова ширина для перших шести клітинок */
+}
+
+th {
+    text-align: center;
+  padding: 5px;
+  border: 4px solid  #ffffff;
+  background-color:#00a43c;
+  color:#ffffff;
+  
+}
+td {
+    text-align: center;
+  padding: 5px;
+  border: 4px solid  #00a43c;
+  color: #008531;
+ 
+}
+th, td{
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.data__select, .data__input {
+    width: 100%;
+    height: auto; /* Висота підлаштовується під вміст */
+    padding: 0.2em 0.5em; /* Налаштування відступів для кращого вигляду */
+    box-sizing: border-box; /* Включення відступів у розрахунок ширини */
+    background-color:#00a43c;
+    color:#ffffff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.table__info{
+    flex: 1; /* Заповнює весь залишковий простір */
+    width: 100%;
+  height: 600px;
+    overflow: auto;
+}
+
+.table__info::-webkit-scrollbar {
+    width: 0em;
+    /* Товщина смуги прокрутки */
+}
+
+.table__info::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    /* Колір смуги прокрутки */
+}
+
+@media (max-width: 1100px) {
+
+    table {
+        width: calc(100% - 20px);
+       
+        margin: 10px;
+        
+      }
+
+      th, td{
+
+        font-size: 16px;
+        font-weight: 700;
+    }
+      .data__select, .data__input {
+        
+          font-size: 16px;
+          font-weight: 700;
+      }
+}
+@media (max-width: 910px) {
+
+    table {
+        width: 100%;
+        border: 1px solid #00a43c;
+        margin: 0px;
+        
+      }
+      th, td{
+
+        font-size: 10px;
+        font-weight: 700;
+        padding: 0px;
+        border: 1px solid #00a43c;
+    }
+      
+      .data__select, .data__input {
+        
+          font-size: 10px;
+          font-weight: 600;
+      }
+}

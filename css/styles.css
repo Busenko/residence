@@ -383,10 +383,10 @@ align-items: center;
     transition: transform 0.3s ease;
 }
 
-.content__item__button:hover img {
+ .content__item__button:hover .img__buuton {
     transform: scale(1.1);
    
-}
+} 
 .content__item a{
     display: flex;
     justify-content: center;
@@ -411,6 +411,7 @@ align-items: center;
 
 .content__item__info {
     max-height: 0;
+  
     overflow: hidden;
     background-color: #F5FFF7;
     width: 100%;
@@ -424,18 +425,44 @@ align-items: center;
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
-ul{
 
-    padding: 10px 40px;
-   
-}
-li{
-
+.ul_content {
+    list-style-type: none; 
+    padding: 10px 10px;
+    position: relative; 
+  }
+  
+.ul_content  .li_content {
+    position: relative; 
+      
     margin-bottom: 8px;
     font-size: 18px;
 font-weight: 700;
-color:#008531;
-}
+color:#008531; 
+    padding-left: 35px;
+    margin: 15px;
+  }
+  
+.ul_content .li_content:hover {
+      color: #00a43c;
+     
+  }
+  
+  
+.ul_content .li_content::before {
+    content: '';
+    position: absolute;
+    top: 3px; 
+    left: 0;
+    width: 25px; 
+    height: 25px; 
+    background-image: url('../assets/icons/punkt.svg'); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+  }
+
+
+/* ................................................................................................................. */
 
 
 .content__title{
@@ -518,18 +545,28 @@ align-items: center;
         padding: 0px;
         
     }
-ul{
-
-        padding: 5px 20px;
-        margin-left: 10px;
-    }
-li{
-    
+    .ul_content {
+        
+        padding: 10px 10px;
+        
+      }
+      
+    .ul_content  .li_content {
+        
         margin-bottom: 5px;
         font-size: 16px;
-    font-weight: 600;
-    color:#008531;
-    }
+
+        padding-left: 30px;
+        margin: 8px;
+      }
+
+    .ul_content .li_content::before {
+
+        width: 20px; 
+        height: 20px; 
+
+      }
+    
     
     .content__item__svg{
 width: 35px;
@@ -599,19 +636,27 @@ width: 35px;
         padding: 0px;
         
     }
- ul{
-
-        padding: 5px 20px;
-        margin-left: 10px;
-    }
- li{
-    
+    .ul_content {
+        
+        padding: 10px 10px;
+        
+      }
+      
+    .ul_content  .li_content {
+        
         margin-bottom: 5px;
         font-size: 14px;
-    font-weight: 600;
-    color:#008531;
-    }
-    
+
+        padding-left: 25px;
+        margin: 5px;
+      }
+
+    .ul_content .li_content::before {
+
+        width: 18px; 
+        height: 18px; 
+
+      }
     .content__item__svg{
 width: 25px;
     }

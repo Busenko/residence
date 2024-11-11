@@ -28,11 +28,17 @@ window.addEventListener("DOMContentLoaded", function () {
         const headerHeight = header.offsetHeight;
         document.documentElement.style.setProperty('--footer-height', `${footerHeight}px`);
         document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+
+
     }
 
     // Виклик функції при завантаженні сторінки та зміні розмірів вікна
     window.addEventListener('load', updateFooterAndHeaderHeight);
     window.addEventListener('resize', updateFooterAndHeaderHeight);
+
+
+
+
 
     // Функція відкриття пунктів item
     function itemsControl() {
@@ -42,10 +48,13 @@ window.addEventListener("DOMContentLoaded", function () {
             const title = coll[i].querySelector('.content__item__button');
             title.addEventListener('click', function () {
                 let content = coll[i].querySelector('.content__item__info');
+                let image = coll[i].querySelector('.img-rotate'); // картинка
                 if (content.style.maxHeight) {
                     content.style.maxHeight = null;
+                    image.classList.remove('rotated'); // поворот картинки
                 } else {
                     content.style.maxHeight = content.scrollHeight + 'px';
+                    image.classList.add('rotated'); //  поворот картинки
                 }
             });
         }
@@ -53,7 +62,13 @@ window.addEventListener("DOMContentLoaded", function () {
 
     itemsControl();
 
-   
+    
+    
+    
+
+
+
+      
   
 // Робота з інтерактивною мапою
 let rooms = document.querySelectorAll('.cls-4');
@@ -150,5 +165,16 @@ scrollContainers.forEach(scrollContainer => {
     // });
 });
 
+
+// Корегуємо таблицю по висоті
+document.addEventListener("DOMContentLoaded", function() {
+    const content = document.querySelector('.content');
+    const tableNav = document.querySelector('.table__nav');
+
+    const tableInfoHeight = content.offsetHeight - tableNav.offsetHeight; // Отримує висоту в пікселях
+    document.documentElement.style.setProperty('--table_info-height', `${tableInfoHeight}px`);
     
+});
+
+
 });
